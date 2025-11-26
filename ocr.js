@@ -1,5 +1,5 @@
 // ocr.js - Lógica de OCR para frontend
-// Comunicación con API local: http://localhost:8001/ocr
+// Comunicación con API en la nube: https://ocrimpel-1032775540289.us-central1.run.app/ocr
 
 class OCRProcessor {
     constructor() {
@@ -99,7 +99,7 @@ class OCRProcessor {
             this.setStatus('🤖 Procesando con OCR (puede tardar hasta 3 minutos)...', 'loading');
 
             const startTime = Date.now();
-            const response = await fetch('http://localhost:8001/ocr', {
+            const response = await fetch('https://ocrimpel-1032775540289.us-central1.run.app/ocr', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
